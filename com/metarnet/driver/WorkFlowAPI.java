@@ -37,7 +37,7 @@ public class WorkFlowAPI  {
             e.printStackTrace();
         }
         URL = pro.get("URL").toString();
-        SYSTEM_NAME=pro.get("SYSTEM").toString();
+        SYSTEM_NAME=pro.get("SYSTEM_NAME").toString();
     }
     /**
      *  1.启动流程
@@ -128,6 +128,7 @@ public class WorkFlowAPI  {
         JSONObject body = JSONObject.parseObject(sr);
         if(!"true".equals(body.getString("result"))){
             System.out.println("提交待办失败");
+            return null;
         }
         List<TaskInstance> taskInstanceList = getMyWaitingTasks("", "", "", processInstID, "");
         if(taskInstanceList==null){
