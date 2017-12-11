@@ -35,10 +35,11 @@ public class WorkFlowTest {
 //        System.out.println(taskInstanceObject.toString());
 
 
-        TaskInstance jsonObject = WorkFlowAPI.startProcess("root", "['root']",
-                "demo-1", "","","default","");
 
-        System.out.println(jsonObject.toString());
+//        TaskInstance jsonObject = WorkFlowAPI.startProcess("root", "['root']",
+//                "demo-1", "","","default","");
+//
+//        System.out.println(jsonObject.toString());
 
     }
 
